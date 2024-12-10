@@ -1,0 +1,2 @@
+start "selenium-grid" java  -Dorg.slf4j.simpleLogger.defaultLogLevel=debug  -cp "selenium-server-4.14.1.jar;target/selenium-setags-matcher-1.0.jar;target/dependency/*" org.openqa.selenium.grid.Main hub --slot-matcher org.bnhp.selenium.matcher.CustomSlotMatcher 
+REM start "selenium-grid" java   -cp "selenium-server-4.14.1.jar;target/selenium-setags-matcher-1.0.jar;target/dependency/*" org.openqa.selenium.grid.Main hub --slot-matcher org.bnhp.selenium.matcher.CustomSlotMatcher 

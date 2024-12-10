@@ -1,0 +1,24 @@
+version: "3"
+services:
+  selenium-hub:
+    image: docker-10032-local.repo.devops.poalim.bank/selenium/hub:4.14.1-bnhptags
+    container_name: selenium-hub
+    environment:
+      - SE_SESSION_REQUEST_TIMEOUT=30000
+#      - SE_OPTS=--log /home/seluser/seleniumgrid.log --log-level INFO
+      - SE_OPTS:"--log /home/seluser/seleniumgrid.log --log-level FINER
+      - SE_NODE_FALLBACK_ENABLED=true
+      #- JVM_SUPPORT_RECOMMENDED_ARGS=-Dorg.slf4j.simpleLogger.defaultLogLevel=debug
+    ports:
+      - "4442:4442"
+      - "4443:4443"
+      - "9080:4444"
+#    logging:
+#      driver: "json-file"
+#      options:
+#        max-size: "10m"
+#        max-file: "3"
+    volumes:
+       - '/grid/grid4/logs/seleniumgrid.log:/home/seluser/seleniumgrid.log'
+#    restart: no
+    restart: unless-stopped
