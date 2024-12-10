@@ -38,8 +38,8 @@ jobs:
         - name: install server dependency to .m2
           run: mvn install:install-file -Dfile=selenium-server-$sel_version.jar -DgroupId=org.seleniumhq.selenium -DartifactId=selenium-server -Dversion=$sel_version -Dpackaging=jar
         - name: maven build
-          run: mvn clean package
-        - name: prepare dependencies folder
-          run: |
-           mvn dependency:copy-dependencies -DoutputDirectory=mydebuenv/dependency
-           cp target/selenium-setags-matcher-1.0.jar mydebuenv/selenium-setags-matcher-1.0.jar           
+          run: mvn clean install
+        #- name: prepare dependencies folder
+        #  run: |
+        #   mvn dependency:copy-dependencies -DoutputDirectory=mydebuenv/dependency
+        #   cp target/selenium-setags-matcher-1.0.jar mydebuenv/selenium-setags-matcher-1.0.jar           
