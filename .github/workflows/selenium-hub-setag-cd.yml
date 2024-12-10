@@ -5,7 +5,7 @@ on:
   #  - cron: '42 21 * * *' # Runs every day at midnight UTC
   push:
     branches:
-      - main
+      - dev
 #
 jobs:
   selenium-hub-setag-cd:
