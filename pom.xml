@@ -47,6 +47,18 @@
     </plugins>
   </build>
 
-
+    <repositories>
+        <repository>
+            <id>selenium-repo</id>
+            <url>https://repo.seleniumhq.org/maven</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </repository>
+        <!-- Add other repositories if needed -->
+    </repositories>
 
 </project>
