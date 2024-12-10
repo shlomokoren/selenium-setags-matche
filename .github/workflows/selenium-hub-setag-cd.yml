@@ -35,3 +35,6 @@ jobs:
           run: curl -o selenium-server-$sel_version.jar "$SEL_JAR_LINK"
         - name: ls
           run: ls -l
+        - name: compile
+          run: |
+            mvn install:install-file -Dfile=selenium-server-$sel_version.jar -DgroupId=org.seleniumhq.selenium -DartifactId=selenium-server -Dversion=$sel_version -Dpackaging=jar
