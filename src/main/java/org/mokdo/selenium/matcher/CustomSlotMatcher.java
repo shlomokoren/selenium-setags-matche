@@ -1,4 +1,4 @@
-package org.bnhp.selenium.matcher;
+package org.mokdo.selenium.matcher;
 
 import org.openqa.selenium.Capabilities;
 import org.openqa.selenium.grid.data.SlotMatcher;

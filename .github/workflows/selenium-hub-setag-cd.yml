@@ -12,6 +12,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       sel_version: "4.14.1"
+      SEL_JAR_LINK: "https://github.com/SeleniumHQ/selenium/releases/download/selenium-4.14.0/selenium-server-4.14.1.jar"
     steps:
         # Step 1: Check out the repository
         - name: Checkout code
@@ -30,7 +31,10 @@ jobs:
             key: ${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}
             restore-keys: |
               ${{ runner.os }}-maven-
-
-        # Step 4: Build the project with Maven
+        -name Downloading Selenium Server JAR
+         run: curl -o selenium-server-$sel_version.jar "$SEL_JAR_LINK"
+        -name ls
+         run: ls -l
+        # Step 5: Build the project with Maven
         - name: Build with Maven
           run: mvn clean package
