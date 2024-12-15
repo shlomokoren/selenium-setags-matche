@@ -36,7 +36,7 @@ jobs:
               ${{ runner.os }}-maven-
         - name: Downloading Selenium Server JAR
           run: |
-            echo curl -o selenium-server-$sel_version.jar $SEL_JAR_LINK
+            echo curl -L -o selenium-server-$sel_version.jar $SEL_JAR_LINK
             curl -o selenium-server-$sel_version.jar "$SEL_JAR_LINK"
             ls -l
         - name: install server dependency to .m2
