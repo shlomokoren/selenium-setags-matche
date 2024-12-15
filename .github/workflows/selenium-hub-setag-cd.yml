@@ -37,7 +37,7 @@ jobs:
         - name: Downloading Selenium Server JAR
           run: |
             echo curl -L -o selenium-server-$sel_version.jar $SEL_JAR_LINK
-            curl -o selenium-server-$sel_version.jar "$SEL_JAR_LINK"
+            curl -L -o selenium-server-$sel_version.jar "$SEL_JAR_LINK"
             ls -l
         - name: install server dependency to .m2
           run: mvn install:install-file -Dfile=selenium-server-$sel_version.jar -DgroupId=org.seleniumhq.selenium -DartifactId=selenium-server -Dversion=$sel_version -Dpackaging=jar
