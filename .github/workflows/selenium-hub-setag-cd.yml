@@ -35,7 +35,7 @@ jobs:
             restore-keys: |
               ${{ runner.os }}-maven-
         - name: Downloading Selenium Server JAR
-          run:|
+          run: |
             echo curl -o selenium-server-$sel_version.jar $SEL_JAR_LINK
             curl -o selenium-server-$sel_version.jar $SEL_JAR_LINK
         - name: ls
