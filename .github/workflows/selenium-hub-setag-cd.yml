@@ -12,7 +12,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       sel_version: "4.14.1"
-      SEL_JAR_LINK: "https://github.com/SeleniumHQ/selenium/releases/download/selenium-$sel_version/selenium-server-sel_version.jar"
+      SEL_JAR_LINK: "https://github.com/SeleniumHQ/selenium/releases/download/selenium-${sel_version}/selenium-server-${sel_version}.jar"
     steps:
         # Step 1: Check out the repository
         - name: Checkout code
