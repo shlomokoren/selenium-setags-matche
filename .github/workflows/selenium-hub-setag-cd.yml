@@ -35,7 +35,9 @@ jobs:
             restore-keys: |
               ${{ runner.os }}-maven-
         - name: Downloading Selenium Server JAR
-          run: curl -o selenium-server-$sel_version.jar $SEL_JAR_LINK
+          run:|
+            echo curl -o selenium-server-$sel_version.jar $SEL_JAR_LINK
+            curl -o selenium-server-$sel_version.jar $SEL_JAR_LINK
         - name: ls
           run: ls -l
         - name: install server dependency to .m2
