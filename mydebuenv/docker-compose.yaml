@@ -2,7 +2,7 @@ version: "3.7"
 
 services:
   selenium-hub:
-    image: selenium-hub-custom
+    image: shlomoko/selenium-hub-custom
     container_name: selenium-hub
     ports:
       - "4444:4444"
@@ -12,7 +12,7 @@ services:
       - selenium-grid
 
   chrome-node:
-    image: docker-10032-repo.repo.devops.poalim.bank/selenium/node-chrome:4.25.0-20240922
+    image: selenium/node-chrome:4.25.0-20240922
     container_name: chrome-node
     depends_on:
       - selenium-hub

@@ -1,5 +1,6 @@
-from docker-10032-local.repo.devops.poalim.bank/selenium/hub:4.14.1
+from selenium/hub:4.14.1
 LABEL org.bnhp.selenium.matcher.image.authors="shlomo.koren@poalim.co.il"
+LABEL CustomSlotMatcherVersion=1.0.1b
 # Set the working directory inside the container
 WORKDIR /opt/selenium
 
