@@ -11,7 +11,7 @@ jobs:
   selenium-hub-setag-cd:
     runs-on: ubuntu-latest
     env:
-      sel_version: "4.14.1"
+      sel_version: "4.20.0"
     steps:
         - name: Set SEL_JAR_LINK
           run: echo "SEL_JAR_LINK=https://github.com/SeleniumHQ/selenium/releases/download/selenium-${sel_version}/selenium-server-${sel_version}.jar" >> $GITHUB_ENV
